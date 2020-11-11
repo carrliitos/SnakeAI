@@ -18,5 +18,7 @@ Test cases implemented so far are all for the basic functions of
 the snake game. Future implementations will include test cases
 for all the algorithms used.
 * [Test Folder](./tests)
-	* [Test Direction](./tests/base/test_direc.py)
+	* [Testing the Direction](./tests/base/test_direc.py)
 	![test direction](./imgs/test_direc.png)
+	* [Testing the Map](./test/base/test_map.py)
+	![Test map](./imgs/test_map.png)

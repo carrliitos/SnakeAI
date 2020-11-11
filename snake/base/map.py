@@ -28,9 +28,9 @@ class Map:
 		self._food = None
 		for i in range(self._numRows):
 			for j in range(self._numCols):
-				if i == 0 or j == self._numRows - 1 or \
-					j == 0 or j == self._numCols - 1:
-						self._content[i][j].type = PointType.WALL
+				if i == 0 or i == self._numRows - 1 or \
+				   j == 0 or j == self._numCols - 1:
+					self._content[i][j].type = PointType.WALL
 				else:
 					self._content[i][j].type = PointType.EMPTY
 
@@ -48,7 +48,7 @@ class Map:
 	@property
 	def numCols(self):
 		return self._numCols
-	
+
 	@property
 	def capacity(self):
 		return self._capacity
@@ -57,6 +57,14 @@ class Map:
 	def food(self):
 		return self._food
 	
+	@property
+	def content(self):
+		return self._content
+	
+	@content.setter
+	def content(self, val):
+		self._content = val
+
 	def point(self, pos):
 		"""Return a point on the map.
 		DO NOT directly modify the point type to PointType.FOOD and vice versa.
@@ -79,7 +87,7 @@ class Map:
 		return self.isInside(pos) and (self.point(pos).type == PointType.EMPTY or \
 										self.point(pos).type == PointType.FOOD)
 
-	def isFull(self, pos):
+	def isFull(self):
 		"""Check if the map is filled with the snake's body."""
 		for i in range(1, self.numRows - 1):
 			for j in range(1, self.numCols - 1):
@@ -96,7 +104,7 @@ class Map:
 			self.point(self._food).type = PointType.EMPTY
 			self._food = None
 
-	def createFood(self):
+	def createFood(self, pos):
 		self.point(pos).type = PointType.FOOD
 		self._food = pos
 		return self._food

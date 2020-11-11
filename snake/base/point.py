@@ -32,7 +32,7 @@ class Point:
 	def type(self):
 		return self._type
 	
-	@property
-	def type(self):
-		return self._type
+	@type.setter
+	def type(self, val):
+		self._type = val
 	
