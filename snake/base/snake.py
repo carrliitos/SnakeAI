@@ -113,12 +113,12 @@ class Snake:
 		return len(self._bodies)
 
 	def head(self):
-		if not in self._bodies:
+		if not self._bodies:
 			return None
 		return self._bodies[0]
 
 	def tail(self):
-		if not in self._bodies:
+		if not self._bodies:
 			return None
 		return self._bodies[-1]
 
