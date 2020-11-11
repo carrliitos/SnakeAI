@@ -26,3 +26,5 @@ for all the algorithms used.
 	![Test point](./imgs/test_point.png)
 	* [Testing positions](./tests/base/test_pos.py)
 	![Testing positions](./imgs/test_pos.png)
+	* [Testing the Snake](./tests/bases/test_snake.py)
+	![Testing Snake](./imgs/test_snake.png)

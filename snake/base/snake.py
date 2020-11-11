@@ -136,6 +136,11 @@ class Snake:
 			self.direcNext == Direc.opposite(self._direc)):
 				return
 
+		oldHeadType, newHeadType = self._newTypes()
+		self._map.point(self.head()).type = oldHeadType
+		newHead = self.head().adj(self._direcNext)
+		self._bodies.appendleft(newHead)
+
 		if not self._map.isSafe(newHead):
 			self._dead = True
 		if self._map.point(newHead).type == PointType.FOOD:
@@ -151,7 +156,7 @@ class Snake:
 		self._map.point(self.tail()).type = PointType.EMPTY
 		self._bodies.pop()
 
-	def newTypes(self):
+	def _newTypes(self):
 		oldHeadType, newHeadType = None, None
 		# newHeadType
 		if self._direcNext == Direc.LEFT:
