@@ -22,3 +22,7 @@ for all the algorithms used.
 	![test direction](./imgs/test_direc.png)
 	* [Testing the Map](./test/base/test_map.py)
 	![Test map](./imgs/test_map.png)
+	* [Testing the points system](./tests/base/test_point.py)
+	![Test point](./imgs/test_point.png)
+	* [Testing positions](./tests/base/test_pos.py)
+	![Testing positions](./imgs/test_pos.png)
