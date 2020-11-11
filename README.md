@@ -14,8 +14,8 @@ I also implement a [Greedy](https://en.wikipedia.org/wiki/Greedy_algorithm)
 until a safe path can be found.
 
 ### Tests
-Test cases implemented so far are all for the basic functions of 
-the snake game. Future implementations will include test cases
+Test cases implemented so far ***(as of 11/11/2020)*** are all for the *basic 
+functions* of the snake game. Future implementations will include test cases
 for all the algorithms used.
 * [Test Folder](./tests)
 	* [Testing the Direction](./tests/base/test_direc.py)
