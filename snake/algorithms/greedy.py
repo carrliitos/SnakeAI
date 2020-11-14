@@ -8,5 +8,4 @@ from snake.solver.path import PathAlgorithm
 
 class GreedyAlgorithm(BaseAlgorithm):
 	def __init__(self, snake):
-		super().__init__(snake)
-		self._pathSolver = PathAlgorithm(snake)
+		pass
